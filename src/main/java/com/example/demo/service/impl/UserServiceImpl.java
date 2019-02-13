@@ -37,8 +37,8 @@ public class UserServiceImpl implements UserService {
         userMapper.delete();
 
         User u = new User();
-        u.setUsername("lucy8888");
-        u.setSex("0");
+        u.setUsername("lucy2");
+        u.setSex("1");
         userMapper.insert(u);
 
         User u2 = new User();
