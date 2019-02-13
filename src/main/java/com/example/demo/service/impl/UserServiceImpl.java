@@ -26,10 +26,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private LogMapper logMapper;
 
-    @Override
-    public User selectByPrimaryKey(Integer id) {
-        return null;
-    }
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
@@ -37,13 +33,13 @@ public class UserServiceImpl implements UserService {
         userMapper.delete();
 
         User u = new User();
-        u.setUsername("lucy2");
-        u.setSex("1");
+        u.setUsername("lucy");
+        u.setSex("0");
         userMapper.insert(u);
 
         User u2 = new User();
-        u2.setUsername("lili5555");
-        u2.setSex("1");
+        u2.setUsername("lili");
+        u2.setSex("q2");
         userMapper.insert(u2);
     }
 
@@ -56,5 +52,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public int addUser(User user) {
         return userMapper.insert(user);
+    }
+
+    @Override
+    public User selectByPrimaryKey(Integer id) {
+        return null;
     }
 }
