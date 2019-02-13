@@ -33,13 +33,13 @@ public class UserServiceImpl implements UserService {
         userMapper.delete();
 
         User u = new User();
-        u.setUsername("lucy");
-        u.setSex("0");
+        u.setUsername("唐武林");
+        u.setSex("1");
         userMapper.insert(u);
 
         User u2 = new User();
-        u2.setUsername("lili");
-        u2.setSex("q2");
+        u2.setUsername("谢谢");
+        u2.setSex("1");
         userMapper.insert(u2);
     }
 
