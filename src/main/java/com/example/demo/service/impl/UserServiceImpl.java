@@ -37,14 +37,14 @@ public class UserServiceImpl implements UserService {
         userMapper.delete();
 
         User u = new User();
-        u.setUsername("lucy2");
+        u.setUsername("唐武林");
         u.setSex("1");
         userMapper.insert(u);
 
         User u2 = new User();
-        u2.setUsername("lili5555");
+        u2.setUsername("谢谢");
         u2.setSex("1");
-        userMapper.insert(u2);
+        userMapper.insert(u2);	
     }
 
     @Override
