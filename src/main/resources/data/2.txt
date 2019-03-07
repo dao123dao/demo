@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="车辆处置通知函" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="92033c43-8bdc-4f25-9810-22eecd6950bc">
 	<property name="ireport.zoom" value="1.4641000000000006"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="144"/>
+	<property name="ireport.y" value="281"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<parameter name="contractSeal" class="java.io.InputStream" isForPrompting="false"/>
 	<parameter name="date" class="java.lang.String"/>
@@ -43,14 +43,14 @@
 					<font fontName="SansSerif" size="13" isBold="true" isUnderline="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 					<paragraph lineSpacing="Double" lineSpacingSize="2.5" tabStopWidth="40"/>
 				</textElement>
-				<textFieldExpression><![CDATA["        您于"+$F{sysloandate}+"与我行签订《个人汽车贷款合同》(合同编号: "+$F{rzcontractno}+"), 合同约定将车辆抵押给我行( 车型为: "+$F{carmodelname}+"，车架号: "+$F{carchassisno}+"，车牌号: "+$F{licenseplateno}+"。)"+"\n"+"        由于您未如约履行《个人汽车贷款合同》相关义务已构成违约，我行有权控制该车辆，现依据合同约定要求您于"+$F{deadline}+"前一次性支付剩余贷款本息及合同项下其他费用，合计金额人民币"+$F{agencyamount}+"元。（暂计算截止至"+$F{deadline}+"），逾期支付仍将继续计算逾期利息及罚息。"+"\n"+"        若您未如期支付上述款项，我行将根据合同第十二条【12.4】约定要求您支付控制车辆所发生的相关费用并将于"+$F{deadline}+"后对车辆进行处置且保留向您追诉的权利。"+"\n"+"\n"+"请收到该函后联系催收部门："+"\n"+"联系方式："+$F{redemptel}+"\n"+"\n"+"\n"+"        特此函告！"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["        您于"+$F{sysloandate}+"与我行签订《个人汽车贷款合同》(合同编号: "+$F{rzcontractno}+"), 合同约定将车辆抵押给我行( 车型为："+$F{carmodelname}+", 车架号: "+$F{carchassisno}+", 车牌号: "+$F{licenseplateno}+"。)"+"\n"+"        由于您未如约履行《个人汽车贷款合同》相关义务已构成违约，我行有权控制该车辆，现依据合同约定要求您于"+$F{deadline}+"前一次性支付剩余贷款本息及合同项下其他费用，合计金额人民币"+$F{agencyamount}+"元( 暂计算截止至"+$F{deadline}+"), 逾期支付仍将继续计算逾期利息及罚息。"+"\n"+"        若您未如期支付上述款项，我行将根据合同约定要求您支付控制车辆所发生的相关费用，并将于"+$F{deadline}+"后对车辆进行处置且保留向您追诉的权利。"+"\n"+"\n"+"请收到该函后联系催收及资产管理部门："+"\n"+"联系电话："+$F{redemptel}+"\n"+"Email："+$F{email}+"\n"+"\n"+"        特此函告！"]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="191" y="36" width="172" height="28" uuid="69fe36a9-0290-497a-ad96-6edd9b1938c9"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="16" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
-				<text><![CDATA[车辆回收通知函]]></text>
+				<text><![CDATA[车辆处置通知函]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="47" y="76" width="412" height="20" uuid="3d6b40d9-8dbb-44c7-8907-9e9f32eaccb6"/>
