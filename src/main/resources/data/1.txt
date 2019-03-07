@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="车辆处置通知函" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="92033c43-8bdc-4f25-9810-22eecd6950bc">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="contractSeal" class="java.io.InputStream" isForPrompting="false"/>
+	<parameter name="date" class="java.lang.String"/>
+	<field name="fininstnameforshow" class="java.lang.String"/>
+	<field name="sysloandate" class="java.lang.String"/>
+	<field name="custname" class="java.lang.String"/>
+	<field name="carmodelname" class="java.lang.String"/>
+	<field name="rzcontractno" class="java.lang.String"/>
+	<field name="carchassisno" class="java.lang.String"/>
+	<field name="licenseplateno" class="java.lang.String"/>
+	<field name="agencyamount" class="java.lang.String"/>
+	<field name="deadline" class="java.lang.String"/>
+	<field name="redemptel" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<detail>
+		<band height="744" splitType="Stretch">
+			<break>
+				<reportElement x="0" y="743" width="555" height="1" uuid="437a8376-35e8-45d3-b10a-775f3737b978"/>
+			</break>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="79" y="689" width="422" height="20" uuid="af598431-37d4-4098-a737-6f47a21ac140"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="13" isBold="true" isUnderline="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fininstnameforshow}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="169" y="724" width="332" height="20" uuid="f8bc2129-f586-4302-96ea-0ace4618e807"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="13" isBold="true" isUnderline="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="47" y="120" width="461" height="554" uuid="e9d2e774-d14d-4e89-b08d-f697e13695fc"/>
+				<box leftPadding="0" rightPadding="0"/>
+				<textElement>
+					<font fontName="SansSerif" size="13" isBold="true" isUnderline="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Double" lineSpacingSize="2.5" tabStopWidth="40"/>
+				</textElement>
+				<textFieldExpression><![CDATA["        您于"+$F{sysloandate}+"与我行签订《个人汽车贷款合同》(合同编号: "+$F{rzcontractno}+"), 合同约定将车辆抵押给我行( 车型为："+$F{carmodelname}+", 车架号: "+$F{carchassisno}+", 车牌号: "+$F{licenseplateno}+"。)"+"\n"+"        由于您未如约履行《个人汽车贷款合同》相关义务已构成违约，我行有权控制该车辆，现依据合同约定要求您于"+$F{deadline}+"前一次性支付剩余贷款本息及合同项下其他费用，合计金额人民币"+$F{agencyamount}+"元( 暂计算截止至"+$F{deadline}+"), 逾期支付仍将继续计算逾期利息及罚息。"+"\n"+"        若您未如期支付上述款项，我行将根据合同约定要求您支付控制车辆所发生的相关费用，并将于"+$F{deadline}+"后对车辆进行处置且保留向您追诉的权利。"+"\n"+"\n"+"请收到该函后联系催收及资产管理部门："+"\n"+"联系电话："+$F{redemptel}+"\n"+"Email："+$F{email}+"\n"+"\n"+"        特此函告！"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="191" y="36" width="172" height="28" uuid="69fe36a9-0290-497a-ad96-6edd9b1938c9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="16" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[车辆处置通知函]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="47" y="76" width="412" height="20" uuid="3d6b40d9-8dbb-44c7-8907-9e9f32eaccb6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="13" isBold="true" isUnderline="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{custname}+'先生/女士：']]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
