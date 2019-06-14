@@ -2,9 +2,8 @@ package com.example.demo.mapper;
 
 import com.example.demo.entity.Log;
 import com.example.demo.entity.LogExample;
-import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 public interface LogMapper {
     long countByExample(LogExample example);
@@ -28,6 +27,4 @@ public interface LogMapper {
     int updateByPrimaryKeySelective(Log record);
 
     int updateByPrimaryKey(Log record);
-
-    void truncate();
 }

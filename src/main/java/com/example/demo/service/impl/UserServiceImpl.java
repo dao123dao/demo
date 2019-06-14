@@ -30,17 +30,17 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
     public void test() {
-        userMapper.delete();
-
-        User u = new User();
-        u.setUsername("唐武林");
-        u.setSex("1");
-        userMapper.insert(u);
-
-        User u2 = new User();
-        u2.setUsername("谢谢");
-        u2.setSex("1");
-        userMapper.insert(u2);
+//        userMapper.delete();
+//
+//        User u = new User();
+//        u.setUsername("唐武林");
+//        u.setSex("1");
+//        userMapper.insert(u);
+//
+//        User u2 = new User();
+//        u2.setUsername("谢谢");
+//        u2.setSex("1");
+//        userMapper.insert(u2);
     }
 
     @Override
